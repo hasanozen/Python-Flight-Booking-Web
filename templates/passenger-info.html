@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="flight-choose">
+    <div class="home" id="homePage">
+        <section class="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/airways_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home</a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/booking-page">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Flights<span class="sr-only">(current)</span></a></li>
+                        <!---COPY HERE----->        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="accountDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-id-card" aria-hidden="true"></i>
+                                My Airways</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownMenuLink" style="float: left">
+                                <a class="dropdown-item" href="/account">
+                                    <i class="fa fa-user" aria-hidden="true"></i>Account</a>
+                                <a class="dropdown-item" href="/basket">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>Basket</a>
+                                <a class="dropdown-item" href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Sign out</a>
+                            </div>
+                        </li>
+                        <!---COPY HERE----->
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <section class="flight-list-welcome">
+        <div class="row">
+            <div class="flight-list-welcome-center col-md-12">
+                <div class="steps col-md-3">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <a>Flight Selection</a>
+                </div>
+                <div class="steps active col-md-3">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a>Passenger Informations</a>
+                </div>
+                <div class="steps col-md-3">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    <a>Payment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------INPUT-------------->
+    <div class="container">
+        <div class="card margined-shadow">
+            <div class="card-header">
+                <h5 class="card-title">{{msg}}. Passenger Informations</h5>
+            </div>
+            <div class="card-body">
+                <form data-ajax="true" data-ajax-begin="OnBegin" data-ajax-complete="OnComplete" data-ajax-failure="OnFailure" data-ajax-success="OnSuccess" id="recover" method="POST" novalidate="novalidate">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="John">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Davis">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="bday">Birthday</label>
+                            <input type="date" class="form-control" name="bday" id="bday">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nationID">Identication Number</label>
+                            <input type="number" class="form-control" name="nationID" id="nationID" placeholder="Your ID">
+                        </div>
+                    </div>
+                    <!---Contact Information----->
+                    <div class="card-body">
+                    <div class="card-header">
+                    <h5 class="card-title">Contact Information</h5>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Mail Address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="example@example.com">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="pNumber">Phone Number</label>
+                            <input type="number" class="form-control" name="pNumber" id="pNumber" placeholder="+905554443322">
+                        </div>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-footer fixed-bottom">
+        <div class="container-fluid">
+            <div class="payment-info col-md-12">
+               <div class="payment-text">
+                   <a href="#">Total</a>
+                <p id="price">TRY {{ucret}}</p>
+               </div>
+                    <button type="submit" class="btn btn-danger" form="recover">Continue</button>
+            </div>
+        </div>
+    </div>
+
+</body></html>

@@ -1,0 +1,649 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.navbar {
+    padding: 10px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.navbar img {
+    height: 30px;
+    padding: 0 20px;
+}
+
+.navbar-collapse ul li a {
+    text-align: center;
+}
+
+.navbar-collapse ul li a i {
+    margin-right: 5px;
+}
+
+.navbar-collapse ul li a:hover {
+    color: white !important;
+    background: black;
+    transition: .3s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    border-radius: 4px;
+}
+
+.welcome {
+    width: auto;
+    height: 90vh;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(../images/melting_iceberg-wallpaper-1920x1080.jpg);
+}
+
+.welcome h1 {
+    margin: 25px;
+    color: #fff;
+    font-size: 58px;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+
+.welcome p {
+
+    margin: 25px;
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
+}
+
+.welcome-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.submit-btn {
+    color: #fff;
+    padding: 15px;
+    background-color: #18A4E0;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 10px 20px -5px rgba(24, 164, 224, 0.4);
+    box-shadow: 0px 10px 20px -5px rgba(24, 164, 224, 0.4);
+}
+
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Form Group -->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+.section {
+    position: relative;
+    height: 100vh;
+}
+
+.section .section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#booking {
+    background-image: url('../images/melting_iceberg-wallpaper-1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #191a1e;
+}
+
+.booking-form {
+    position: relative;
+    background: #fff;
+    max-width: 642px;
+    width: 100%;
+    margin: auto;
+    padding: 45px 25px 25px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+    background-color: #fff;
+    height: 65px;
+    padding: 0px 15px;
+    padding-top: 24px;
+    color: #191a1e;
+    border: 2px solid #dfe5e9;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+    color: #dfe5e9;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+    color: #dfe5e9;
+}
+
+.booking-form .form-control::placeholder {
+    color: #dfe5e9;
+}
+
+.booking-form .form-control:focus {
+    background: #f9fafb;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+    color: #dfe5e9;
+}
+
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.booking-form select.form-control + .select-arrow {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+    color: #dfe5e9;
+    font-size: 14px;
+}
+
+.booking-form select.form-control + .select-arrow:after {
+    content: '\279C';
+    display: block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
+    height: 24px;
+    font-size: 12px;
+    color: #98c9ee;
+}
+
+.booking-form .form-checkbox input {
+    position: absolute !important;
+    margin-left: -9999px !important;
+    visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+    position: relative;
+    padding-top: 4px;
+    padding-left: 30px;
+    font-weight: 700;
+    color: #191a1e;
+}
+
+.booking-form .form-checkbox label + label {
+    margin-left: 15px;
+}
+
+.booking-form .form-checkbox input + span {
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #dfe5e9;
+    border-radius: 50%;
+}
+
+.booking-form .form-checkbox input + span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: #4fa3e3;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .form-checkbox input:not(:checked) + span:after {
+    opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked + span:after {
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.booking-form .submit-btn {
+    color: #fff;
+    background-color: #4fa3e3;
+    font-weight: 400;
+    height: 65px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    text-transform: uppercase
+}
+
+.booking-cta {
+    margin-top: 45px;
+}
+
+.booking-cta h1 {
+    font-size: 52px;
+    text-transform: uppercase;
+    color: #4fa3e3;
+    font-weight: 400;
+}
+
+.booking-cta p {
+    font-size: 22px;
+    color: #191a1e;
+}
+
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Form Group -->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+.subscribe {
+    padding: 15px;
+    background-color: #e5e5e5;
+}
+
+h5,
+h3 {
+    font-weight: 700;
+}
+
+.subscribe p {
+    margin: 0;
+    color: #7b7b7b;
+}
+
+#mail-subscribe {
+    margin-top: 20px;
+}
+
+#mail-subscribe button {
+    width: 100%;
+}
+
+.mobile-app {
+    padding: 40px;
+}
+
+.mobile-app p {
+    margin-bottom: 20px;
+    color: #7b7b7b;
+}
+
+.mobile-app img {
+    height: 50px;
+    margin-top: 5%
+}
+
+#lightFooter {
+    background: #000;
+}
+
+#lightFooter a i {
+    padding: 10px;
+}
+
+#lightFooter p {
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Account-->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+.account-basic {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    background-image: url(../images/melting_iceberg-wallpaper-1920x1080.jpg);
+}
+
+.account-basic .card {
+    border: none;
+}
+
+#userBasicInfos {
+    margin-top: 120px;
+    color: #000;
+}
+
+.user-welcome {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#userBasicInfos a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userBasicInfos h1 {
+    font-weight: 700;
+}
+
+#totalPoint {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.flights {
+    margin: 10px 0;
+}
+
+.flights h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.flights .card {
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.flights .card-text {
+    margin-top: 20px;
+}
+
+.flights .flight-destinations p {
+    display: inherit;
+}
+
+.flights .flight-info .card-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.flights .flight-info .card-subtitle {
+    font-size: 12px;
+}
+
+.card-margin {
+    margin: 30px 0;
+}
+
+.flights .flight-info .card-text {
+    font-size: 16px;
+}
+
+.flights .flight-info .card-body {
+    padding: 10px 0 0;
+    border-top: solid #7b7b7b;
+    border-width: 1px;
+}
+
+#loginModal button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.modal-footer-body {
+    margin-bottom: 5px;
+}
+
+.modal-footer-body p {
+    display: inline;
+}
+
+.modal-footer-body a {
+    color: #007bff;
+    margin: 5px 0;
+
+    padding: 5px 0;
+}
+
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+/*<!--Registiration-->*/
+/*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
+
+.registration {
+    overflow: hidden;
+    background-image: url(../images/melting_iceberg-wallpaper-1920x1080.jpg);
+}
+
+.registration .card, .registration-signin .card {
+    margin: 15vh .5vh 5vh 0;
+}
+
+.reg-welcome {
+    color: #fff;
+    margin-top: 15vh;
+}
+
+.reg-welcome h1 {
+    font-size: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reg-welcome p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.reg-welcome img {
+    height: 30px;
+}
+
+.registration-signin{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../images/melting_iceberg-wallpaper-1920x1080.jpg);
+}
+
+.admin-welcome {
+    color: #fff;
+    height: 40vh;
+    background: url(../images/melting_iceberg-wallpaper-1920x1080.jpg);
+}
+
+.admin-welcome h1 {
+    margin: 25px;
+    color: #fff;
+    font-size: 58px;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+
+.admin-welcome p {
+    margin: 25px;
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
+}
+
+.admin-welcome-center {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.flight-controls .add-flight {
+    margin: 25px;
+}
+
+.flight-controls .add-flight .card h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.flight-controls button {
+    margin-top: 10px;
+}
+
+.flight-controls .add-flight .card {
+    border-color: #007bff;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.flight-choose {
+    background: #fafbfc;
+}
+
+.flight-list-welcome {
+    color: #000;
+    height: 25vh;
+    text-align: center;
+}
+
+.flight-list-welcome .steps {
+    color: #fff;
+    display: inline;
+    padding: 20px;
+    background: #000;
+}
+
+.flight-list-welcome .steps.active {
+    background: #d72638;
+}
+
+.flight-list-welcome-center {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.list-view {
+    margin: 25px 0;
+}
+
+.list-view button{
+    text-align: inherit;
+}
+
+.list-view .card{
+    border: none;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.price-section p {
+    display: inline;
+    font-size: 22px;
+}
+
+.price-section .text-area{
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.margined-shadow{
+    margin: 20px 0;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.info-footer{
+    width: 100%;
+    padding: 0 20px;
+    color: #fff;
+    background-color: #000;
+}
+
+.info-footer .payment-info{
+    text-align: end;
+    margin: 20px;
+}
+
+.bottom-margined{
+    margin-bottom: 30vh;
+}
+
+#price{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.bg{
+    height: auto;
+    background-repeat: repeat-y;
+    background: url("../images/melting_iceberg-wallpaper-1920x1080.jpg");
+}
+
+.w-100{
+    width: 100%;
+}
+
+.m-10{
+    margin: 5px 0;
+}
+
+.sec-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shift-top{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

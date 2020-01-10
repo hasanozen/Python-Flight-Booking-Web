@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+        $(function() {
+            $('#cardButton').click(function() {
+                window.location = '/login'
+            });
+        });
+    </script>
+</head>
+
+<body class="flight-choose bg">
+    <div class="home" id="homePage">
+        <section class="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/airways_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home</a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/booking-page">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Flights<span class="sr-only">(current)</span></a></li>
+                        <!---COPY HERE----->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signin">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                Sign in</a></li>
+                        <!---COPY HERE----->
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <section class="flight-list-welcome">
+        <div class="row">
+            <div class="flight-list-welcome-center col-md-12">
+                <div class="steps active col-md-3">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <a>Uçuş Seçimi</a>
+                </div>
+                <div class="steps col-md-3">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a>Yolcu Bilgileri</a>
+                </div>
+                <div class="steps col-md-3">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    <a>Ödeme</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Flight List------------>
+    <section>
+        {% for i in range(ucuslarl) %}
+        <div class="list-view">
+            <div class="container">
+                <button value="{{ucuslar[i][0],yolcu}}" name="passenger"  class="card" id="cardButton" type="submit" style="border: none;">
+                    <div class="card-body" style="padding: 0 25px;">
+                        <section class="flights">
+                            <div class="row">
+                                <div class="col-md-9">
+                                   <h5 class="card-title" id="flightID" >{{ucuslar[i][0]}}</h5>
+                                    <div class="flight-destinations flight-info">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="card-text" style="font-size: 24px;">
+                                                    <p id="destinationFrom">{{ucuslar[i][2]}}</p>
+                                                    <i class="fa fa-arrow-right" aria-hidden="true" style="margin: 0 5px"></i>
+                                                    <p id="destinationWhere">{{ucuslar[i][3]}}</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a class="card-subtitle" id="dateID">Date</a>
+                                                        <p class="card-info-text">{{ucuslar[i][6]}}</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="card-subtitle" id="departTime">Depart</a>
+                                                        <p class="card-info-text">{{ucuslar[i][4]}}</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="card-subtitle" id="gateID">ELT</a>
+                                                        <p class="card-info-text">{{ucuslar[i][5]}}</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="card-subtitle" id="gateID">Remaining seats</a>
+                                                        <p class="card-info-text">{{ucuslar[i][12]}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-section col-md-3 text-center" style="background: #e7e9ec; height: inherit; width: inherit;">
+                                    <div class="text-area">
+                                        <p id="money-unit" style="font-weight: 700">TRY</p>
+                                        <p id="price">{{ucret[i]}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    </button>
+
+
+            </div>
+        </div>
+        {% endfor %}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body></html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="home">
+        <section class="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/airways_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/booking-page">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Flights</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="accountDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-id-card" aria-hidden="true"></i>
+                                My Airways</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownMenuLink" style="float: left">
+                                <a class="dropdown-item" href="/account">
+                                    <i class="fa fa-user" aria-hidden="true"></i>Account</a>
+                                <a class="dropdown-item" href="/basket">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>Basket</a>
+                                <a class="dropdown-item" href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <!---FORM GROUP--->
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-1">
+                        <div class="booking-form">
+                            <form data-ajax="true" data-ajax-begin="OnBegin" data-ajax-complete="OnComplete" data-ajax-failure="OnFailure" data-ajax-success="OnSuccess" id="recover" method="POST" novalidate="novalidate">
+                                <div class="form-group">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Flying from</span>
+                                            <input class="form-control" list="from_airports" type="text" placeholder="City or airport" name="froml">
+                                            <datalist id="from_airports">
+                                                {% for i in range(fl) %}
+                                                <option>{{fromlocation[i]}}</option>
+                                                {% endfor %}
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Flyning to</span>
+                                            <input class="form-control" list="to_airports" type="text" placeholder="City or airport" name="tol">
+                                            <datalist id="to_airports">
+                                                {% for i in range(tl) %}
+                                                <option>{{tolocation[i]}}</option>
+                                                {% endfor %}
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <span class="form-label">Departing</span>
+                                           <input type="date" class="form-control" name="departureDate" id="departureDate" placeholder="Departure Date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Adults (18+)</span>
+                                            <select class="form-control" name="adult">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Children (0-17)</span>
+                                            <select class="form-control" name="children">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Travel class</span>
+                                            <select class="form-control" name="class">
+                                                <option>Economy class</option>
+                                                <option>Business class</option>
+                                                <option>First class</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="submit-btn m-10">Show flights</button>
+                                <button value="sorted" name="sort" type="submit" class="submit-btn m-10">Show flights(sorted by free seats)</button>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---FORM GROUP--->
+    <!--- Start Footer Section ----------------->
+    <footer id="lightFooter" class="text-center">
+        <a href="#" style="padding: 1rem"><i class="fa fa-angle-up" style="transform: scale(2); color: #a5a5a5;"></i></a><br>
+        <p>Back to top</p>
+
+        <a href="https://www.facebook.com/hasan.ozen.790" target="_blank" style="padding: 1rem"><i class="fa fa-facebook-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.instagram.com/hsnnoznn/" target="_blank" style="padding: 1rem"><i class="fa fa-instagram" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.linkedin.com/in/hasan-özen-337274153" target="_blank" style="padding: 1rem"><i class="fa fa-twitter-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.behance.net/hasanozen131fe" target="_blank" style="padding: 1rem"><i class="fa fa-youtube-play" style="transform: scale(2); color: #a5a5a5"></i></a>
+
+
+        <p style="font-size: 12px;">All rights reserved &copy; 2019 | Made with <span class="fa fa-heart"></span> by Hasan Ozen</p>
+    </footer>
+    <!--- End Footer Section ----------------->
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!---Start Header Section------------->
+    <section class="header">
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="/">
+                <img src="static/images/airways_logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">
+                            {{msg}}
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!---End Header Section------------->
+
+    <!---Start Registration Section------------->
+    <section class="registration">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 reg-welcome">
+                    <h1>Sign up</h1>
+                    <p>
+                        When you sign up, you are going to dive into privileges land. 
+                        You will be accompanied by a wide range of delicious meals
+                        and you will be a resident of an airline that you will continue
+                        to be with you wherever you go.
+                    </p>
+                    <figure>
+                        <img src="static/images/airways_logo_white.png">
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form data-ajax="true" data-ajax-begin="OnBegin" data-ajax-complete="OnComplete" data-ajax-failure="OnFailure" data-ajax-success="OnSuccess" id="recover" method="POST" novalidate="novalidate">
+                               <div class="row">
+                                   <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">First Name</label>
+                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="John">
+                                    </div>
+                                </div>
+                                    <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Last Name</label>
+                                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Davis">
+                                    </div>
+                                </div>
+                               </div>
+                                <div class="form-group">
+                                    <label for="email">Mail Address</label>
+                                    <input type="email" class="form-control" name="mail" id="mail" placeholder="example@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="+905552226655">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">Country</label>
+                                            <select class="form-control" id="CountryControlSelect1">
+                                                <option>Turkey</option>
+                                                <option>Germany</option>
+                                                <option>US</option>
+                                                <option>Hungary</option>
+                                                <option>Spain</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="name">City</label>
+                                        <select class="form-control" id="CityControlSelect1">
+                                            <option>İstanbul</option>
+                                            <option>Çanakkale</option>
+                                            <option>Kastamonu</option>
+                                            <option>Düzce</option>
+                                            <option>Bursa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <textarea class="form-control" id="address" rows="3" placeholder="Times Blv. 436 St. 173/10, NY"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="**********">
+                                </div>
+                                <button class="submit-btn" style="width: 100%">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---End Registration Section------------->
+
+    <!--- Start Footer Section ----------------->
+    <footer id="lightFooter" class="text-center">
+        <a href="#" style="padding: 1rem"><i class="fa fa-angle-up" style="transform: scale(2); color: #a5a5a5;"></i></a><br>
+        <p>Back to top</p>
+
+        <a href="https://www.facebook.com/hasan.ozen.790" target="_blank" style="padding: 1rem"><i class="fa fa-facebook-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.instagram.com/hsnnoznn/" target="_blank" style="padding: 1rem"><i class="fa fa-instagram" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.linkedin.com/in/hasan-özen-337274153" target="_blank" style="padding: 1rem"><i class="fa fa-twitter-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.behance.net/hasanozen131fe" target="_blank" style="padding: 1rem"><i class="fa fa-youtube-play" style="transform: scale(2); color: #a5a5a5"></i></a>
+
+
+        <p style="font-size: 12px;">All rights reserved &copy; 2019 | Made with <span class="fa fa-heart"></span> by Hasan Ozen</p>
+    </footer>
+    <!--- End Footer Section ----------------->
+
+</body></html>

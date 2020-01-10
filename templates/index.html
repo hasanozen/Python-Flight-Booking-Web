@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="home" id="homePage">
+        <section class="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/airways_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/booking-page">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Flights</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                Sign in</a></li>        
+                        <!---<li class="nav-item">
+                            <a class="nav-link" href="account.html" data-toggle="modal" data-target="#loginModal">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                Log in</a></li>----->
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <!-- Modal --
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp" placeholder="johndavis@example.com">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary">Log in</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer-body text-center">
+                        <p>You don't have a account?</p>
+                        <a type="button" class="btn btn-link">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>--->
+
+        <section class="welcome">
+            <div class="welcome-center">
+                <h1>Enjoy your flight!</h1>
+                <p>We'll help you to find the tickets and plan your trip! Download our app.</p>
+                <a href="/booking-page">
+                    <button class="submit-btn">Check Flights</button>
+                </a>
+            </div>
+            <!---<a class="welcome-image"><img src="images/melting_iceberg-wallpaper-1920x1080.jpg"></a>--->
+        </section>
+    </div>
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h5 class="subtitle">Stay up-to-date</h5>
+                    <p class="subtitle-text">
+                        Subscribe now and receive the latest announcement</p>
+                </div>
+                <div class="col-md-6 col-sm-12" id="mail-subscribe">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <button type="submit" class="btn btn-outline-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile-app">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Airways mobile app</h3>
+                    <p>Are you ready to explore privileges?</p>
+                </div>
+                <div class="col-md-6">
+                    <a href="#">
+                        <img src="static/images/icons/get-it-on-play-store.png" alt="Google Play">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#">
+                        <img src="static/images/icons/download-on-the-app-store.png" alt="Google Play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Start Footer Section ----------------->
+    <footer id="lightFooter" class="text-center">
+        <a href="#" style="padding: 1rem"><i class="fa fa-angle-up" style="transform: scale(2); color: #a5a5a5;"></i></a><br>
+        <p>Back to top</p>
+
+        <a href="https://www.facebook.com/hasan.ozen.790" target="_blank" style="padding: 1rem"><i class="fa fa-facebook-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.instagram.com/hsnnoznn/" target="_blank" style="padding: 1rem"><i class="fa fa-instagram" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.linkedin.com/in/hasan-özen-337274153" target="_blank" style="padding: 1rem"><i class="fa fa-twitter-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.behance.net/hasanozen131fe" target="_blank" style="padding: 1rem"><i class="fa fa-youtube-play" style="transform: scale(2); color: #a5a5a5"></i></a>
+
+
+        <p style="font-size: 12px;">All rights reserved &copy; 2019 | Made with <span class="fa fa-heart"></span> by Hasan Ozen</p>
+    </footer>
+    <!--- End Footer Section ----------------->
+</body></html>

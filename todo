@@ -1,0 +1,30 @@
++1. Kullanıcının kendini sisteme kaydedebilmesi
++2. Şifrenin veri tabanında güvenli bir şekilde tutulması (hash fonksiyonu kullanılarak)+
++3. Kullanıcı girişi+
++4. Kullanıcı çıkışı+
++5. Adminin otel/uçuş eklemesi+
++6. Adminin otel/uçuş silmesi+
++7. Adminin otel/uçuş bilgilerini güncellemesi+
++8. Adminin giriş yapabileceği (otel/uçuş ekleme, silme, güncelleme) sayfalara admin yetkisi
+    olmayan kimsenin girememesi+
++9. Adminin girdiği otelleri/uçuşları herkesin görebileceği (login gerektirmeyen) bir sayfada
+    yayınlanması
+?10. Kullanıcı oturum açtığında alışveriş sepetinin otomatik oluşturulması
+?11. Alışveriş sepetine otel/uçuş eklenebilmesi
+?12. Alışveriş sepetinden otel/uçuş silinebilmesi
+?13. Alışveriş sepetindeki otel/uçuş bilgilerinin değiştirilebilmesi (kişi ve gün sayısı vb.)
+?14. Alışveriş sepetinin silinebilmesi (ya da tümüyle boşaltılması)
++15. Alışveriş sepetine otel/uçuş eklendiğinde 10 dk işlem yapılmadığında sepetin boşaltılması
++16. Üye çıkışı yapıldığında sepetin boşaltılması
++17. Otel/uçuş rezervasyonunun yapılması (kullanıcının satın alma geçmişine kaydedilmesi) ve yeni
+bir sepet oluşturulması
++18. Geçmiş Rezervasyonları Göster linki ile kişinin hangi rezervasyonu hangi tarih-saatte yaptığını
+    görebilmesi ve kendisinden başka kimsenin görememesi.+
++19. Üye girişi olmadan üye işlemleri yapılmak istendiğinde (ör. Geçmiş Rezervasyonları Göster)
+login sayfasına yönlendirilmesi (Hata vermemesi).+
++20. Üyelerin her yaptığı rezevasyon için harcama miktarının %3’ü kadar bonus kazanması ve
+    kazanılan bonus bilgisinin müşteri bazında tutulması.
++21. Kullanıcılar kazandığı geçmiş bonusları rezervasyonlarını tamamlarken kullanabilmesi.
++22. Sistem üzerinden kullanıcıdan bağımsız bir sayfada tarih aralığı girilerek otellerin/uçakların
+    doluluk oranlarının azalan sırayla görüntülenebilmesi.
++23. Web sitesinin internet alanında yayınlanması (zorunlu değil- ekstra puan)

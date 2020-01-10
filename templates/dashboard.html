@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airways</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Script Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Icon Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="black-bg">
+    <div class="home">
+        <section class="header">
+            <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/airways_logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-stretch" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/booking-page">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Flights</a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/dashboard">
+                                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                Dashoard<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/logout">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                Log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </div>
+
+    <section class="admin-welcome text-center">
+        <div class="admin-welcome-center">
+            <h1>Welcome Master!</h1>
+            <p>You are free to edit or add flights in perspective of rules. Let's fly some!</p>
+        </div>
+    </section>
+
+    <section class="flight-controls">
+        <div class="add-flight">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Add Flight</h2>
+                        <form action="dashboard" data-ajax="true" data-ajax-begin="OnBegin" data-ajax-complete="OnComplete" data-ajax-failure="OnFailure" data-ajax-success="OnSuccess" id="recover" method="POST" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="airlineID">Airline ID</label>
+                                        <input type="text" class="form-control" name="airlineID" id="airlineID" placeholder="Enter airline id">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="airlineID">From</label>
+                                        <input type="text" class="form-control" name="origine" id="fromLocation" placeholder="Flight origin">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="departureTime">Departure Time</label>
+                                        <input type="time" class="form-control" name="departureTimee" id="departureTime" placeholder="Departure Time">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="departureDate">Departure Date</label>
+                                        <input type="date" class="form-control" name="departureDatee" id="departureDate" placeholder="Departure Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="airlineName">Airline Name</label>
+                                        <input type="text" class="form-control" name="airlineNamee" id="airlineName" placeholder="Enter airline name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="airlineID">Where</label>
+                                        <input type="text" class="form-control" name="wheree" id="toLocation" placeholder="Flying to where">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="arrivalTime">Arrival Time</label>
+                                        <input type="time" class="form-control" name="arrivalTimee" id="arrivalTime" placeholder="Arrival Time">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="totalSeats">Total Seats</label>
+                                        <input type="number" class="form-control" name="totalSeatse" id="totalSeats" placeholder="Plane capacity">
+                                    </div>
+                                </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="totalSeats">Price</label>
+                                        <input type="number" class="form-control" name="price" id="price" placeholder="Price">
+                                    </div>
+                            </div>
+                            <a style="color: blue; font-size: 20px;">
+                                REMEMBER! WE ALWAYS CHECK FLIGHT INFOS <span style="color: red">2</span> TIMES.
+                            </a>
+                            <button  type="submit" class="btn btn-danger" style="width: 100%; text-transform: uppercase">Confirm to ADd Flight</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <hr>
+        <!-------------------------------------->
+        <div class="add-flight">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Edit Flight</h2>
+                        <form action="/dashboard" data-ajax="true" data-ajax-begin="OnBegin" data-ajax-complete="OnComplete" data-ajax-failure="OnFailure" data-ajax-success="OnSuccess" id="recover" method="POST" novalidate="novalidate" >
+                            <div class="form-group">
+                                <label for="flightID">Choose Flight</label>
+                                <select  class="form-control" id="flightID" name="flightID">
+                                    <option>{{flightdetay[0][0]}}</option>
+                                    {% for i in range(editidl) %}
+                                    <option >{{editid[i][0]}}</option>
+                                    {% endfor %}
+                                </select>
+                                <button type="submit" class="btn btn-warning" style="width: 10%; text-transform: uppercase">Select</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="airlineID">Status</label>
+                                        <input type="text" class="form-control" name="airlineID" id="airlineID" placeholder="Enter status" value={{flightdetay[0][8]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="airlineID">From</label>
+                                        <input type="text" class="form-control" name="origin" id="fromLocation" placeholder="Flight origin" value={{flightdetay[0][2]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="departureTime">Departure Time</label>
+                                        <input type="time" class="form-control" name="departureTime" id="departureTime" placeholder="Departure Time" value={{flightdetay[0][4]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="departureDate">Departure Date</label>
+                                        <input type="date" class="form-control" name="departureDate" id="departureDate" placeholder="Departure Date" value={{flightdetay[0][6]}}>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="airlineName">Airline Name</label>
+                                        <input type="text" class="form-control" name="airlineName" id="airlineName" placeholder="Enter airline name" value={{flightdetay[0][1]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="airlineID">Where</label>
+                                        <input type="text" class="form-control" name="where" id="toLocation" placeholder="Flying to where" value={{flightdetay[0][3]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="arrivalTime">Arrival Time</label>
+                                        <input type="time" class="form-control" name="arrivalTime" id="arrivalTime" placeholder="Arrival Time" value={{flightdetay[0][5]}}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="totalSeats">Total Seats</label>
+                                        <input type="number" class="form-control" name="totalSeats" id="totalSeats" placeholder="Plane capacity" value={{flightdetay[0][7]}}>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                        <label for="totalSeats">Price</label>
+                                        <input type="number" class="form-control" name="pricee" id="price" value="{{flightdetay[0][11]}}" placeholder="Price">
+                                    </div>
+                            </div>
+                            <a style="color: blue; font-size: 20px;">
+                                REMEMBER! WE ALWAYS CHECK FLIGHT INFOS <span style="color: red">2</span> TIMES.
+                            </a>
+                            <button name="edit"   type="submit" class="btn btn-warning" style="width: 100%; text-transform: uppercase">Confirm Changes</button>
+                            <button name="delete" type="submit" class="btn btn-danger" style="width: 100%; text-transform: uppercase">Cancel Flight</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Start Footer Section ----------------->
+    <footer id="lightFooter" class="text-center">
+        <a href="#" style="padding: 1rem"><i class="fa fa-angle-up" style="transform: scale(2); color: #a5a5a5;"></i></a><br>
+        <p>Back to top</p>
+
+        <a href="https://www.facebook.com/hasan.ozen.790" target="_blank" style="padding: 1rem"><i class="fa fa-facebook-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.instagram.com/hsnnoznn/" target="_blank" style="padding: 1rem"><i class="fa fa-instagram" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.linkedin.com/in/hasan-özen-337274153" target="_blank" style="padding: 1rem"><i class="fa fa-twitter-square" style="transform: scale(2); color: #a5a5a5"></i></a>
+        <a href="https://www.behance.net/hasanozen131fe" target="_blank" style="padding: 1rem"><i class="fa fa-youtube-play" style="transform: scale(2); color: #a5a5a5"></i></a>
+
+
+        <p style="font-size: 12px;">All rights reserved &copy; 2019 | Made with <span class="fa fa-heart"></span> by Hasan Ozen</p>
+    </footer>
+    <!--- End Footer Section ----------------->
+
+</body></html>
